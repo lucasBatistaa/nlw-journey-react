@@ -1,7 +1,7 @@
 # plann.er (Gerenciador de viagens)
 Aplicação web para gerenciamento de viagens com participantes, atividades, links, local e data.
 
-## Tecnologia Utilizada
+## Tecnologias Utilizadas
 ![My Skills](https://skillicons.dev/icons?i=react)
 ![My Skills](https://skillicons.dev/icons?i=ts)
 ![My Skills](https://skillicons.dev/icons?i=vite)
