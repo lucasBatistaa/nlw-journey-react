@@ -9,17 +9,22 @@ import { format } from 'date-fns'
 
 interface DestinationAndDateStepProps {
     isGuestsInputOpen: boolean
+    eventStartAndEndDates: DateRange | undefined
     closeGuestsInput: () => void
     openGuestsInput: () => void
+    setDestination: (destination: string) => void
+    setEventStartAndEndDates: (dates: DateRange | undefined) => void
 }
 
 export function DestinationAndDateStep({
     isGuestsInputOpen,
     closeGuestsInput,
-    openGuestsInput
+    openGuestsInput,
+    setDestination,
+    eventStartAndEndDates,
+    setEventStartAndEndDates
 }: DestinationAndDateStepProps) {
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false)
-    const [eventStartAndEndDates, setEventStartAndEndDates] = useState<DateRange | undefined>()
 
     const openDatePicker = () => {
         setIsDatePickerOpen(true)
@@ -38,7 +43,7 @@ export function DestinationAndDateStep({
             <div className='flex items-center gap-2 flex-1'>
                 <MapPin className='size-5 text-zinc-400' />
 
-                <input disabled={isGuestsInputOpen} type='text' placeholder='Para onde você vai?' className='bg-transparent text-lg placeholder-zinc-400 outline-none w-full' />
+                <input onChange={event => setDestination(event.target.value)} disabled={isGuestsInputOpen} type='text' placeholder='Para onde você vai?' className='bg-transparent text-lg placeholder-zinc-400 outline-none w-full' />
             </div>
 
             <button onClick={openDatePicker} disabled={isGuestsInputOpen} className='flex flex-1 items-center gap-2 text-left'>
