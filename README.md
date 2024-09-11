@@ -1,5 +1,6 @@
 # plann.er (Gerenciador de viagens)
 Aplicação web para gerenciamento de viagens com participantes, atividades, links, local e data.
+Desenvolvida durante a NLW Journey, da Rocketseat.
 
 ## Tecnologias Utilizadas
 ![My Skills](https://skillicons.dev/icons?i=react)
